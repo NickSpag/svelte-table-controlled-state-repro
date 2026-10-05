@@ -1,6 +1,6 @@
 # svelte-table: controlled state resets after every change
 
-Reproduction for a bug in `@tanstack/svelte-table` 9.2.4.
+Reproduction for a bug in `@tanstack/svelte-table` 9.2.6 (first seen on 9.2.4).
 
 When `expanded` or `pagination` is controlled through `state` and `on*Change`,
 `row.toggleExpanded()` and `table.nextPage()` do nothing: the table applies the
@@ -20,7 +20,7 @@ pnpm test
 Or open it in StackBlitz, which runs the tests on load:
 https://stackblitz.com/github/NickSpag/svelte-table-controlled-state-repro
 
-## Result on 9.2.4
+## Result on 9.2.6
 
 ```
 × table.options.data is the array passed in              expected "same data: true",  received "same data: false"
